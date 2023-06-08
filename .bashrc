@@ -27,6 +27,9 @@ esac
 
 #ALIAS
 
+# for relative path with ranger
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
 # General 
 alias vb="v ~/.bashrc"
 alias sb="source ~/.bashrc"
@@ -40,10 +43,12 @@ alias shut="shutdown now"
 alias rd="rm -rf"
 alias t="touch"
 alias cls="clear"
+alias cl="clear"
+alias x="exit"
 
 # git commands
 alias g="git"
-alias ga="git add ."
+alias ga="git add"
 alias gi="git init"
 alias gc="git commit -m"
 alias gb="git branch"
@@ -51,6 +56,8 @@ alias gr="git remote add origin"
 alias gp="git push -u origin"
 alias gcl="git clone"
 alias gs="git status"
+alias gr="git rm --cached -r"
+
 
 # for directories
 # general bn = b(n-a) && ba where n > a 
@@ -99,20 +106,29 @@ alias lam="sudo /opt/lampp/lampp start"
 alias sahithTheHacker="hollywood"
 
 # run python django
-alias ps="python manage.py runserver"
-alias psp="django-admin startproject"
-alias psa="django-admin startapp"
+alias pmr="python manage.py runserver"
+alias pm="python manage.py"
+alias pmp="django-admin startproject"
+alias pma="django-admin startapp"
+alias pmmm="python manager.py makemigrations"
+alias pmm="python manage.py migrate"
+
 
 # open config
-alias vc="ra ~/confidential" # open confidential 
-alias vn="ra ~/.config/nvim" # nvim config
+alias vc="cd ~/confidential && ranger" # open confidential 
+alias vn="cd ~/.config/nvim && ranger" # nvim config
 alias vv="v ~/.vimrc" # nvim config
-alias vlf="ra ~/.config/lf" # lf terminal manager config
-alias vra="ra ~/.config/ranger" # ranger terminal manger config
+alias vlf="cd ~/.config/lf && ranger" # lf terminal manager config
+alias vra="cd ~/.config/ranger && ranger" # ranger terminal manger config
+alias vss="cd ~/.config/synth-shell && ranger" # open synth-shell config
 
 #terminal file manager
 alias f="lf" #open lf terminal manager
 alias ra="ranger" #open ranger terminal manager
+alias a="ranger" # operm ranger 
+
+# neofetch
+alias nf="clear && neofetch"
 
 
 
@@ -226,3 +242,11 @@ fi
 
 
 
+
+##-----------------------------------------------------
+## synth-shell-prompt.sh
+if [ -f /home/sahith/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/sahith/.config/synth-shell/synth-shell-prompt.sh
+fi
+
+neofetch
