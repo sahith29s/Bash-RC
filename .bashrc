@@ -1,21 +1,5 @@
-#This is only for me 
-# 				FOR ADDING ANY SHORTCUT #eg alias t="touch" #vim ~/.bashrc
-# alias t="touch"
-# vim ~/.bashrc change to require shortcut 
-# source ~/.bashrc
-
-# 				HOW TO  REMOVE ANY SHORCUT eg : unalias t
-
-# unalias t
-# vim ~/.bashrc and remove the shortcut 
-# source ~/.bashrc 
-
-
-
-
-
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
+alias fin="find ./ -name"
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -42,8 +26,8 @@ alias m="mkdir"
 alias shut="shutdown now"
 alias rd="rm -rf"
 alias t="touch"
-alias cls="clear"
 alias cl="clear"
+alias cls="clear && neofetch"
 alias x="exit"
 
 # git commands
@@ -93,13 +77,14 @@ alias sdi="sudo dpkg -i"
 alias sar="sudo apt remove"
 alias s="sudo"
 alias sar="sudo apt remove"
+alias saug="sudo apt update && sudo apt upgrade -y"
 
 # for javascript framworks and libraries
 alias nd="npm run dev"
 alias ns="npm run start"
 alias nt="npm run tailwind"
 
-# starting mongodb
+# starting xampp
 alias lam="sudo /opt/lampp/lampp start"
 
 # for hollywood
@@ -129,6 +114,9 @@ alias a="ranger" # operm ranger
 
 # neofetch
 alias nf="clear && neofetch"
+alias nfa="cd ~ && clear && neofetch"
+
+alias p="w3m"
 
 
 
@@ -248,5 +236,19 @@ fi
 if [ -f /home/sahith/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
 	source /home/sahith/.config/synth-shell/synth-shell-prompt.sh
 fi
+
+
+#This is only for me 
+# 				FOR ADDING ANY SHORTCUT #eg alias t="touch" #vim ~/.bashrc
+# alias t="touch"
+# vim ~/.bashrc change to require shortcut 
+# source ~/.bashrc
+
+# 				HOW TO  REMOVE ANY SHORCUT eg : unalias t
+
+# unalias t
+# vim ~/.bashrc and remove the shortcut 
+# source ~/.bashrc 
+
 
 neofetch
