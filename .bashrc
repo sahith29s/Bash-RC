@@ -18,17 +18,21 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir
 alias vb="v ~/.bashrc"
 alias sb="source ~/.bashrc"
 alias v="nvim"
+alias e="expr"
 alias re="reboot"
 alias r="rm"
 alias ec="echo"
 alias md="mkdir"
 alias m="mkdir"
 alias shut="shutdown now"
+alias sus="systemctl suspend"
 alias rd="rm -rf"
+# alias clr="cl && "
 alias t="touch"
 alias cl="clear"
 alias cls="clear && neofetch"
 alias x="exit"
+
 
 # git commands
 alias g="git"
@@ -37,11 +41,14 @@ alias gi="git init"
 alias gc="git commit -m"
 alias gb="git branch"
 alias gr="git remote add origin"
-alias gp="git push -u origin"
+alias gp="git push"
+alias gpp="git push origin main"
 alias gcl="git clone"
+alias gsw="git switch"
 alias gs="git status"
-alias gr="git rm --cached -r"
-
+alias gre="git restore"
+alias greset="git reset"
+alias grem="git remote -v"
 
 # for directories
 # general bn = b(n-a) && ba where n > a 
@@ -79,6 +86,10 @@ alias s="sudo"
 alias sar="sudo apt remove"
 alias saug="sudo apt update && sudo apt upgrade -y"
 
+# dpkg broken dependencies
+# sudo apt --fix-broken install ./docker-desktop-4.10.1-amd64.deb (command to fix the broken dependencies)
+alias sdi="sudo dpkg -i"
+
 # for javascript framworks and libraries
 alias nd="npm run dev"
 alias ns="npm run start"
@@ -100,12 +111,13 @@ alias pmm="python manage.py migrate"
 
 
 # open config
-alias vc="cd ~/confidential && ranger" # open confidential 
+
 alias vn="cd ~/.config/nvim && ranger" # nvim config
 alias vv="v ~/.vimrc" # nvim config
 alias vlf="cd ~/.config/lf && ranger" # lf terminal manager config
 alias vra="cd ~/.config/ranger && ranger" # ranger terminal manger config
 alias vss="cd ~/.config/synth-shell && ranger" # open synth-shell config
+alias va="v ~/.config/awesome/rc.lua" # open awesome config
 
 #terminal file manager
 alias f="lf" #open lf terminal manager
@@ -118,7 +130,8 @@ alias nfa="cd ~ && clear && neofetch"
 
 alias p="w3m"
 
-
+# set vim
+set -o vi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
