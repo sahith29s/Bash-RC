@@ -14,6 +14,9 @@ esac
 # for relative path with ranger
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
+# deploy website
+alias mongoDep='mongosh "mongodb+srv://cluster0.7szhj0r.mongodb.net/" --apiVersion 1 --username sahith'
+
 # General 
 alias vb="v ~/.bashrc"
 alias sb="source ~/.bashrc"
@@ -78,6 +81,7 @@ alias ca="cd &&"
 
 # sudo 
 alias sai="sudo apt install"
+alias sni="sudo snap install"
 alias sau="sudo apt update"
 alias sag="sudo apt upgrade"
 alias sdi="sudo dpkg -i"
@@ -117,7 +121,7 @@ alias vv="v ~/.vimrc" # nvim config
 alias vlf="cd ~/.config/lf && ranger" # lf terminal manager config
 alias vra="cd ~/.config/ranger && ranger" # ranger terminal manger config
 alias vss="cd ~/.config/synth-shell && ranger" # open synth-shell config
-alias va="v ~/.config/awesome/rc.lua" # open awesome config
+alias va="cd ~/.config/awesome && v rc.lua" # open awesome config
 
 #terminal file manager
 alias f="lf" #open lf terminal manager
