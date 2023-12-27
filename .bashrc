@@ -10,6 +10,10 @@ case $- in
 esac
 
 #ALIAS
+# for scropt
+alias myscrot='scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png'
+alias mic="pactl list | sed -n '/^Source/,/^$/p' | grep Mute"
+
 
 # for relative path with ranger
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
@@ -117,6 +121,7 @@ alias pmm="python manage.py migrate"
 # open config
 
 alias vn="cd ~/.config/nvim && ranger" # nvim config
+alias vc="cd ~/.config/Code/User && ranger" # nvim config
 alias vv="v ~/.vimrc" # nvim config
 alias vlf="cd ~/.config/lf && ranger" # lf terminal manager config
 alias vra="cd ~/.config/ranger && ranger" # ranger terminal manger config
@@ -268,4 +273,5 @@ fi
 # source ~/.bashrc 
 
 
+bind '"\C-H": backward-kill-word'
 neofetch
